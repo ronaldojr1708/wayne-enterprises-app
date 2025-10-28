@@ -1,0 +1,331 @@
+/* =================================
+   ESTILOS GERAIS
+   ================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f5f7; /* cor de fundo suave */
+    color: #333;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =================================
+   PÁGINA DE LOGIN
+   ================================= */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: #2c3e50;
+}
+
+.login-box .subtitle {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #7f8c8d;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #34495e;
+}
+
+.input-group input, .modal-content textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-login:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.error-text {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 15px;
+    height: 20px;
+}
+
+/* =================================
+   ESTILOS DO DASHBOARD
+   ================================= */
+.main-header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+main.container {
+    display: block;
+    padding-top: 100px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.toolbar h2 {
+    margin: 0;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    color: #2c3e50;
+}
+
+.resources-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.resources-table th, .resources-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+    color: #2c3e50;
+}
+
+.resources-table thead {
+    background-color: #ecf0f1;
+    font-weight: bold;
+}
+
+.resources-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.resources-table tbody tr:hover {
+    background-color: #d6eaf8;
+}
+
+.btn-logout {
+    padding: 8px 16px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.action-buttons button {
+    margin-right: 5px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.action-buttons button:hover {
+    transform: translateY(-2px);
+}
+
+.btn-edit {
+    background-color: #f1c40f;
+    color: #2c3e50;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* =================================
+   ESTILOS DO MODAL (POPUP)
+   ================================= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.3);
+    animation: fadeInModal 0.4s ease forwards;
+}
+
+@keyframes fadeInModal {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.close-button {
+    color: #7f8c8d;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover {
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+/* =================================
+   CHART & NOTIFICAÇÕES
+   ================================= */
+.chart-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 0.7s ease;
+}
+
+.chart-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#notification-container {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification {
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification.success { background-color: #2ecc71; }
+.notification.error { background-color: #e74c3c; }
